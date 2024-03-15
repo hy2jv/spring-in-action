@@ -19,9 +19,14 @@ HTTP 요청을 처리하고, 브라우저에 보여줄 HTML을 뷰에 요청하�
 
 =====
 
-*```RequiredArgsConstructor``` 사용시 , not initialized in the default constructor 에러 발생*  
+*```RequiredArgsConstructor``` 사용할 때 , not initialized in the default constructor 에러 발생*  
 lombok 추가 시, gradle 버전이 달라서 발생하는 문제로 build.gradle 파일에서 아래와 같이 lombok을 추가하여 해결할 수 있다.
 ```
 compileOnly 'org.projectlombok:lombok'
 annotationProcessor 'org.projectlombok:lombok'
 ```
+
+=====
+
+2.2 테스트
+![img.png](img.png)
