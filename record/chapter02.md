@@ -35,9 +35,10 @@ annotationProcessor 'org.projectlombok:lombok'
 =====
 
 2.2 테스트
-![img.png](img.png)
+![img.png](img.png)  
 
-2.3 유효성 테스트
-![img_1.png](img_1.png)
-![img_2.png](img_2.png)
-![img_3.png](img_3.png)
+
+2.3 유효성 테스트  
+![img_1.png](img_1.png)  
+![img_2.png](img_2.png)  
+![img_3.png](img_3.png)  
