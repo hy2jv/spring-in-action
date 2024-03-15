@@ -13,10 +13,27 @@ private static final org.slf4j.Logger log =
 
 ```@Valid``` : 제출된 객체의 유효성 검사를 수행하도록 스프링 MVC에 알려준다.
 
+```addViewControllers()``` 메서드는 하나 이상의 뷰 컨트롤러를 등록하기 위해 사용할 수 있는 ```ViewControllerRegistry```를 인자로 받는다.
+
 =====  
 
 **컨트롤러**는 스프링 MVC 프레임워크의 중심적인 역할을 수행한다.  
 HTTP 요청을 처리하고, 브라우저에 보여줄 HTML을 뷰에 요청하거나, 또는 REST 형태의 응답 몸체에 직접 데이터를 추가한다.
+  
+
+**뷰 컨트롤러**는 모델 데이터나 사용자 입력을 처리하지 않는 간단한 컨트롤러로, 뷰에 요청을 전달하는 일만 하는 컨트롤러를 말한다.(실습 : HomeController -> WebConfig)
+
+WebConfig는 뷰 컨트롤러의 역할을 수행하는 구성 클래스이며, WebMvcConfigurer 인터페이스를 구현한다.
+  
+
+스프링에서 지원되는 템플릿 종류
+- ```FreeMarker```
+- ```Groovy templates```
+- ```JavaServer Pages(JSP)```
+- ```Mustache```
+- ```Thymeleaf```
+
+JSP를 선택한다면 추가로 고려할 것이 있다. 내장된 톰캣과 제티 컨테이너를 포함해서 자바 서블릿 컨테이너는 /WEB-INF 밑에서 JSP 코드를 찾는데, 애플리케이션을 실행 가능한 JAR 파일로 생성한다면 이러한 요구사항을 충족시킬 방법이 없다. *따라서, 애플리케이션을 WAR 파일로 생성하고 종전의 서블릿 컨테이너에 설치하는 경우에는 JSP를 선택하는 게 맞지만 실행 가능한 JAR 파일로 생성한다면, JSP를 제외한 나머지 중 하나를 선택해야 한다.*
 
 =====
 
