@@ -11,6 +11,7 @@ private static final org.slf4j.Logger log =
 ```@GetMapping``` : HTTP GET 요청이 수신될 때 그 요청을 처리하기 위해 메서드가 호출됨을 나타낸다.  
 이 외에도 ```@PostMapping```, ```@PutMapping```, ```@DeleteMapping```, ```@PatchMapping```이 존재한다.
 
+```@Valid``` : 제출된 객체의 유효성 검사를 수행하도록 스프링 MVC에 알려준다.
 
 =====  
 
@@ -26,7 +27,17 @@ compileOnly 'org.projectlombok:lombok'
 annotationProcessor 'org.projectlombok:lombok'
 ```
 
+
+유효성 검사를 하는 한 가지 방법으로 메서드에 수많은 if/then 블록을 너저분하게 추가하는 것이 있다. 하지만, 이 방법은 무척 번거롭고 코드 파악과 디버깅이 어렵다.  
+-> 스프링은 자바의 빈 유효성 검사 API를 지원한다.
+**Hibernate** 컴포넌트는 스프링 부트의 웹 스타터 의존성으로 자동 추가되는데, 이를 통해 추가 코드 없이 쉽게 유효성 검사를 수행할 수 있다.
+
 =====
 
 2.2 테스트
 ![img.png](img.png)
+
+2.3 유효성 테스트
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)
