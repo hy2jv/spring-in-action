@@ -22,3 +22,10 @@ Ingredient.Type.valueOf(rs.getString("type"))
 
 ```queryForObject()``` 메서드는 query()와 동일하게 실행되지만, 객체의 List를 반환하는 대신 하나의 객체만 반환한다.
 첫 번째와 두 번째 인자는 ```query()```와 같으며, 세 번째 인자로는 검색할 행의 ```id```를 전달한다. 이렇게 되면 id가 첫 번째 인자로 전달된 SQL에 있는 ```?``` 대신 교체되어 쿼리에 사용된다.
+
+  
+- ingredient: 식자재 정보를 저장한다.
+- Taco: 사용자가 식자재를 선택하여 생성한 타코 디자인에 관한 정보를 저장한다.
+- Taco_Ingredients: Taco와 Ingredient 테이블 간의 관계를 나타내며, Taco 테이블의 각 행에 대해 하나 이상의 행을 포함한다.
+- Taco_Order: 주문 정보를 저장한다.
+- Taco_Order_Tacos: Taco_Order와 Taco 테이블간의 관계를 나타내며, Taco_Order 테이블의 각 행에 대해 하나 이상의 행을 포함한다.
