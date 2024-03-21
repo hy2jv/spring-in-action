@@ -26,8 +26,6 @@ public class JdbcOrderRepository implements OrderRepository{
                 .usingGeneratedKeyColumns("id");
 
         this.objectMapper = new ObjectMapper();
-
-
     }
 
     @Override
